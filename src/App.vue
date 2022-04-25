@@ -7,8 +7,6 @@
 
 <script>
 import HeaderLayout from "@/components/HeaderLayout";
-//import JoinMember from "@/components/JoinMember";
-//import TogetherDonation from "@/components/TogetherDonation";
 
 export default {
   name: "App",

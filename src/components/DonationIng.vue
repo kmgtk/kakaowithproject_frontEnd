@@ -1,4 +1,6 @@
 <template>
+  <button @click="setTest">click</button>
+  {{this.$store.getters.plus}}
     <div data-tiara-layer="topic" class="group_catelist">
         <h3 class="screen_out">모금함 카테고리</h3>
         <div class="inner_catelist">
@@ -87,6 +89,7 @@
 
 import DonationListCard from "@/components/DonationListCard";
 
+
     export default {
         name: "DonationIng",
       components:{
@@ -104,7 +107,8 @@ import DonationListCard from "@/components/DonationListCard";
           return{
             width:pix+"%",
           }
-        }
+        },
+
       },
 
         methods :{
@@ -114,6 +118,9 @@ import DonationListCard from "@/components/DonationListCard";
           },
           click_box_sorting(box_sorting_name){
             this.isBoxSortingActive = box_sorting_name;
+          },
+          setTest(){
+            this.$store.dispatch('TIME','test2');
           }
 
         },
